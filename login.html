@@ -1,0 +1,108 @@
+<html> 
+<head> 
+ <title>Sneakers.co Login</title>
+</head> 
+
+<header>
+    <nav>  
+      <ul>  
+      <li>  
+      <a href="homepage.html"> Home </a>  
+      </li>  
+      <li>  
+      <a href="nike.html"> Nike </a>  
+      </li> 
+      <li>  
+        <a href="adidas.html"> Adidas </a>
+      </li>
+      <li>
+      <a href="login.html"> Login/Sign Up </a>  
+      </li>  
+      </ul>  
+      </nav>
+  </header>
+
+<style>
+    h1{
+        text-align: center;
+        font-family: "Lucida Console";
+        font-size: 50px;
+        color: black;
+    }
+body {
+  align-items: center;
+  background-color: #f2f2f2;
+  font-family: "Lucida Console";
+}
+p{
+    font-size: 20px;
+    font-family: "Lucida Console";
+    color: black;
+    text-align: center;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover {
+  background-color: #111;
+  color: white;
+}
+</style>
+
+<body> 
+ <div id = "frm"> 
+ <h1>Login / Sign Up</h1> 
+ <form name="f1" action = "login.php" onsubmit = "return validation()" method = "POST"> 
+ <p> 
+ <label> User Name: </label> 
+ <input type = "text" id ="user" name = "user" /> 
+ </p> 
+ <p> 
+ <label> Password: </label> 
+ <input type = "password" id ="pass" name = "pass" /> 
+ </p> 
+ <p> 
+ <input type = "submit" id = "btn" value = "Login" /> 
+ </p> 
+ </form> 
+ </div>
+ <script> 
+ function validation() 
+ { 
+ var id=document.f1.user.value; 
+ var ps=document.f1.pass.value; 
+ if(id.length=="" && ps.length=="") { 
+ alert("User Name and Password fields are empty"); 
+ return false; 
+ } 
+ else 
+ { 
+ if(id.length=="") { 
+ alert("User Name is empty"); 
+ return false; 
+ } 
+ if (ps.length=="") { 
+ alert("Password field is empty"); 
+ return false; 
+ } 
+ } 
+ } 
+ </script> 
+</body> 
+</html>
